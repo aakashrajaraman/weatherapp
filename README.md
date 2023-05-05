@@ -1,5 +1,7 @@
 
 Weather Widget
+
+
 This is a weather widget that displays the temperature, visibility, feels like, and humidity of a given location using the OpenWeather API. The widget is built using React and has a Django backend to store API calls.
 
 Features:
