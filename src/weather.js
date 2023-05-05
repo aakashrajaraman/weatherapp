@@ -1,9 +1,24 @@
-import { useState } from 'react';
+import { useState , useEffect} from 'react';
 import './weather.css';
+import axios from 'axios';
+
+
 
 function WeatherApp() {
   const [location, setLocation] = useState('');
   const [weatherData, setWeatherData] = useState(null);
+  useEffect(() => {
+    async function getAllWeather() {
+      try{
+        const location = await axios.get("http://127.0.0.1:8000/api/weather/");
+        console.log(location.data);
+      } catch (error) {
+        console.log(error);
+      }
+  
+  }
+  getAllWeather();
+  },[])
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -20,7 +35,7 @@ function WeatherApp() {
       <label>
         Enter a Location
       </label>
-      <input type="text" value={location} onChange={(event) => setLocation(event.target.value)} />
+      <input type="text"  onChange={(event) => setLocation(event.target.value)} />
       <button type="submit">Get Weather</button>
     </form>
     {weatherData && (
