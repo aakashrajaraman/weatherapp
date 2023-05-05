@@ -1,70 +1,30 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Weather Widget
+This is a weather widget that displays the temperature, visibility, feels like, and humidity of a given location using the OpenWeather API. The widget is built using React and has a Django backend to store API calls.
 
-## Available Scripts
+Features:
+- Displays the current temperature, visibility, feels like, and humidity of a given location.
+- Stores API calls in a Django backend for later retrieval.
+- Built using React for a modern and responsive user interface.
+- Uses the OpenWeather API to retrieve weather data.
+- Uses the Django REST Framework to create a RESTful API.
+Installation:
 
-In the project directory, you can run:
+To install the project, follow these steps:
 
-### `npm start`
+- Clone the repository to your local machine.
+- Install the required dependencies by running pip install -r requirements.txt from the root directory of the project.
+- Set up your API keys in the weatherapp/settings.py file. You can get your API key from OpenWeather API.
+- Navigate to the weatherapp directory and run python manage.py migrate to create the database tables.
+- Run the server by running python manage.py runserver from the weatherapp directory.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Usage:
+Once the server is running, you can access the weather widget by visiting http://localhost:8000/ in your web browser. Enter a location in the search box to display the current temperature, visibility, feels like, and humidity for that location. The widget will also store API calls in the Django backend for later retrieval.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Running Django and React Separately:
+If you prefer to run Django and React separately, follow these steps:
 
-### `npm test`
+- To run the Django server, navigate to the weatherapp directory and run python manage.py runserver.
+- To run the React app, navigate to the root directory of the project and run npm start.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Note that running Django and React separately may cause issues with cross-origin requests. If you encounter any issues, try running Django and React concurrently using the instructions in the "Installation" section above.
